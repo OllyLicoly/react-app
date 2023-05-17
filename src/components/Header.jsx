@@ -1,39 +1,40 @@
 import React from 'react'
-import { Button } from 'react-bootstrap';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import {Link} from 'react-router-dom';
 import "../App.css";
 
 
 const Header = () => {
   return (
-    <div>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand> <Link to={'/'}>A&B</Link> </Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link>
-              <Link to={'/'}>Главная</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to={'/favorites'}>Избранное</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to={'/cart'}>Корзина</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to={'/description'}>Описание</Link>
-            </Nav.Link>
-          </Nav>
-          <Nav>
-            <Button variant="primary">Войти</Button>
-          </Nav>
-        </Container>
-      </Navbar>  
-      <br/>    
+    
+<div className='container'>
+<header className='row row-col-cols-1 row-cols-sm-2 row-cols-md-5 py-15 my-15 '>
+  <div className='col mb-0'>    
+  <img src='img/logo.png' width={150} height={110}></img>
     </div>
+    <div className='col mb-3'>
+    </div>
+    <div className='col mb-0'>      
+      <ul className='nav flex-column'>
+        <li className='nav-item mb-0'>
+          <a className='nav-link p-3 m-4 text-muted' href="#about">О нас</a>
+        </li>        
+      </ul>
+    </div>
+    <div className='col mb-0'>      
+      <ul className='nav flex-column'>
+        <li className='nav-item mb-0'>
+          <a className='nav-link p-3 m-4 text-muted' href="#tyrs">Туры</a>
+        </li>       
+      </ul>
+    </div>  
+    <div className='col mb-0'>    
+      <ul className='nav flex-column'>
+        <li className='nav-item mb-0'>
+          <a className='nav-link p-3 m-4 text-muted' href="#contacts">Контакты</a>
+        </li>
+      </ul>
+    </div>       
+</header>
+</div>
   )
 }
 
